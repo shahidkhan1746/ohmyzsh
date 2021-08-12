@@ -98,10 +98,7 @@ setup_ohmyzsh() {
 
   echo "${BLUE}Cloning Oh My Zsh...${RESET}"
 
-  command_exists git || {
-    fmt_error "git is not installed"
-    exit 1
-  }
+
 
   ostype=$(uname)
   if [ -z "${ostype%CYGWIN*}" ] && git --version | grep -q msysgit; then
